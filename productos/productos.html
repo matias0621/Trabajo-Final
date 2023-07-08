@@ -1,0 +1,153 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilos.css">
+    <!-- <link rel="stylesheet" href="productos.css"> -->
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <svg class="icon icon-tabler icon-tabler-menu-2" id="menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+          </svg>
+
+        <ul>
+            <li>Inicio</li>
+            <li>Contacto</li>
+            <li>Producto</li>
+            <li>Sorteo</li>
+        </ul>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/1969/1969979.png" alt="Icono">
+    </header>
+
+<main class="contenedor-flex">
+    <article class="card">
+        <div class="card-img">   
+            <img src="data:image/jpeg;base64,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" alt="javascript">
+        </div>
+            <div class="card-info">
+                <h2>JAVASCRIPT</h2>
+                <p>curso de javascript</p>
+                <p>precio:
+                200$<span><img src="" alt=""></span></p>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l14 1l-1 7h-13" />
+                      </svg>
+                </button>
+            </div>
+    </article>
+
+    <article class="card">
+        <div class="card-img">   
+            <img src="https://i.blogs.es/8d2420/650_1000_java/1366_2000.png">
+        </div>
+            <div class="card-info">
+                <h2>JAVASCRIPT</h2>
+                <p>curso de javascript</p>
+                <p>precio:
+                200$<span><img src="" alt=""></span></p>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l14 1l-1 7h-13" />
+                      </svg>
+                </button>
+            </div>
+    </article>
+
+    <article class="card">
+        <div class="card-img">   
+            <img src="data:image/png;base64,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">
+        </div>
+            <div class="card-info">
+                <h2>JAVASCRIPT</h2>
+                <p>curso de javascript</p>
+                <p>precio:
+                200$<span><img src="" alt=""></span></p>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l14 1l-1 7h-13" />
+                      </svg>
+                </button>
+            </div>
+    </article>
+
+    <article class="card">
+        <div class="card-img">   
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/800px-ISO_C%2B%2B_Logo.svg.png">
+        </div>
+            <div class="card-info">
+                <h2>JAVASCRIPT</h2>
+                <p>curso de javascript</p>
+                <p>precio:
+                200$<span><img src="" alt=""></span></p>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l14 1l-1 7h-13" />
+                      </svg>
+                </button>
+            </div>
+    </article>
+
+    <article class="card">
+        <div class="card-img">   
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png">
+        </div>
+            <div class="card-info">
+                <h2>JAVASCRIPT</h2>
+                <p>curso de javascript</p>
+                <p>precio:
+                200$<span><img src="" alt=""></span></p>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l14 1l-1 7h-13" />
+                      </svg>
+                </button>
+            </div>
+    </article>
+
+    
+   
+
+
+
+
+    
+
+    
+
+    
+</main>
+
+    
+</body>
+</html>
+    
