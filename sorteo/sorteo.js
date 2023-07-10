@@ -1,6 +1,8 @@
 const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
 const finalValue = document.getElementById("final-value");
+let curso = "";
+
 //Object that stores values of minimum and maximum angle for a value
 const rotationValues = [
   { minDegree: 0, maxDegree: 30, value: "Java" },
@@ -55,7 +57,7 @@ let myChart = new Chart(wheel, {
       datalabels: {
         color: "#ffffff",
         formatter: (_, context) => context.chart.data.labels[context.dataIndex],
-        font: { size: 24 },
+        font: { size: 16 },
       },
     },
   },
@@ -65,7 +67,9 @@ const valueGenerator = (angleValue) => {
   for (let i of rotationValues) {
     //if the angleValue is between min and max then display it
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
-      finalValue.innerHTML = `<p>Value: ${i.value}</p>`;
+      finalValue.innerHTML = `<p>Felicidades te ganaste el curso de ${i.value}</p>`;
+      curso = i.value;
+      verficarCurso(curso)
       spinBtn.disabled = false;
       break;
     }
@@ -79,7 +83,7 @@ let resultValue = 101;
 spinBtn.addEventListener("click", () => {
   spinBtn.disabled = true;
   //Empty final value
-  finalValue.innerHTML = `<p>Good Luck!</p>`;
+  finalValue.innerHTML = `<p>Buena suerte!</p>`;
   //Generate random degrees to stop at
   let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
   //Interval for rotation animation
@@ -104,6 +108,31 @@ spinBtn.addEventListener("click", () => {
     }
   }, 10);
 });
+
+function abrirVentana(url){
+  window.open(url, "_black");
+}
+
+function verficarCurso(cursos){
+  if (cursos == "Kotlin"){
+    abrirVentana("https://www.youtube.com/watch?v=BQaxPwZWboA&list=PLNdFk2_brsRdYF0FXDtSaGvluzBNHRbNe")
+  }
+  else if (cursos == "C++"){
+    abrirVentana("https://www.youtube.com/watch?v=dJzLmjSJc2c&list=PLWtYZ2ejMVJlUu1rEHLC0i_oibctkl0Vh")
+  }
+  else if (cursos == "C#"){
+    abrirVentana("https://www.youtube.com/watch?v=6EBNIgkrU74&list=PLU8oAlHdN5BmpIQGDSHo5e1r4ZYWQ8m4B")
+  }
+  else if (cursos == "Python"){
+    abrirVentana("https://www.youtube.com/watch?v=Kp4Mvapo5kc&list=PLNdFk2_brsRdgQXLIlKBXQDeRf3qvXVU_")
+  }
+  else if (cursos == "Java"){
+    abrirVentana("https://www.youtube.com/watch?v=L1oMLsiMusQ&list=PLyvsggKtwbLX9LrDnl1-K6QtYo7m0yXWB")
+  }
+  else if (cursos == "Javascript"){
+    abrirVentana("https://www.youtube.com/watch?v=ivdTnPl1ND0")
+  }
+}
 
 const burger = document.getElementById("menu-button");
 const navbar = document.getElementById("navbar");

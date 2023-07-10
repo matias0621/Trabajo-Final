@@ -34,6 +34,53 @@ header img {
 header ul {
     display: none;
 }
+header ul li a{
+    text-decoration: none;
+    color: black;
+}
+main a{
+    color: #000000;
+}
+
+a:hover{
+    color: yellow;
+}
+
+main section p{
+    margin: 1rem 0;
+}
+
+#navbar{
+    position: fixed;
+    background: var(--color-red);
+    height: 100vh;
+    width: 70vw;
+    transition: all 2s ease;
+    transform: translateX(-100%);
+    z-index: 3;
+    padding: 1rem 2rem;
+}
+  
+#navbar ul{
+    margin: 2rem 0;
+    list-style: none;
+}
+  
+#navbar ul li{
+    margin: 1.5rem 0;
+    font-size: 1.8rem;
+}
+  
+#navbar ul li a{
+    color: black;
+    text-decoration: none;
+}
+  
+#navbar button{
+    background: none;
+    border: none;
+    outline: none;
+}
 
 .carrusel-container {
     height: 50vh;
@@ -50,6 +97,7 @@ header ul {
     width: 6rem;
     background: none;
     border: none;
+    outline: none;
 }
 
 .img-container{
@@ -58,7 +106,7 @@ header ul {
     overflow: hidden;
     display: flex;
     align-items: center;
-    transition: none;
+    transition: all 1s ease;
 }
 
 .logos-img {
@@ -68,7 +116,9 @@ header ul {
 }
 
 .parrafos {
-    font-size: 2rem;
+    margin-left: .3rem;
+    max-width: 98%;
+    font-size: 1rem;
 }
 
 svg {
@@ -82,7 +132,7 @@ svg {
 @media (min-width: 400px) {
     header {
         width: 100%;
-        padding: 0 2rem 0 1rem;
+        padding: 0 0.5rem 0 1rem;
     }
 }
 

@@ -14,6 +14,16 @@ body {
 	height: 100vh;
 	background: var(--color-pink);
 }
+
+header ul li a{
+    text-decoration: none;
+    color: black;
+    transition: all 1s ease;
+}
+
+header ul li a:hover{
+    color: yellow;
+}
 #navbar{
     position: fixed;
     background: var(--color-red);
@@ -64,15 +74,6 @@ header img {
 
 header ul {
     display: none;
-}
-
-
-
-.button-style {
-    height: 6rem;
-    width: 6rem;
-    background: none;
-    border: none;
 }
 
 .wrapper {
@@ -137,16 +138,13 @@ header ul {
 }
 
 @media (min-width: 400px) {
-    header {
-        width: 100%;
-        padding: 0 2rem 0 1rem;
-    }
+
 	.wrapper {
 		font-size: 12px;
-	  }
-	  img {
-		right: -5%;
-	  }
+	}
+    header {
+        height: 8vh;
+    }
 }
 
 @media (min-width: 600px) {
@@ -155,10 +153,12 @@ header ul {
     }
 	.wrapper {
 		font-size: 12px;
-	  }
-	  img {
-		right: -5%;
-	  }
+	}
+	header img{
+        height: 3rem;
+        width: 3rem;
+
+    }
 }
 
 @media screen and (max-width: 768px) {

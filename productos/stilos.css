@@ -18,6 +18,7 @@ button{
     border: none;
     outline: none;
     background-color: #fff;
+    cursor: pointer;
 }
 
 .contenedor-flex{
@@ -25,6 +26,7 @@ button{
     flex-wrap: wrap;
     margin-top: 2rem;
     gap: .5rem;
+    justify-content: center;
 }
 
 .card{
@@ -88,15 +90,46 @@ header ul {
     display: none;
 }
 
-.carrusel-container {
-    height: 50vh;
-    width: 100%;
-    background: #FF6A6A;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+header ul li a{
+    text-decoration: none;
+    color: black;
 }
 
+header ul li a:hover{
+    color: yellow;
+}
+
+#navbar{
+    position: fixed;
+    background: var(--color-red);
+    height: 100vh;
+    width: 70vw;
+    transition: all 2s ease;
+    transform: translateX(-100%);
+    z-index: 3;
+    padding: 1rem 2rem;
+}
+  
+#navbar ul{
+    margin: 2rem 0;
+    list-style: none;
+}
+  
+#navbar ul li{
+    margin: 1.5rem 0;
+    font-size: 1.8rem;
+}
+  
+#navbar ul li a{
+    color: black;
+    text-decoration: none;
+}
+  
+#navbar button{
+    background: none;
+    border: none;
+    outline: none;
+}
 
 .button-style {
     height: 6rem;
@@ -105,31 +138,8 @@ header ul {
     border: none;
 }
 
-.img-container{
-    height: 20rem;
-    width: 13.5rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    transition: none;
-}
-
-.logos-img {
-    height: 13.5rem;
-    width: 13.5rem;
-    padding: 0 1.5rem;
-}
-
-.parrafos {
-    font-size: 2rem;
-}
-
 svg {
     margin-left: .5rem;
-}
-
-.border{
-    filter: drop-shadow(0px 0px 20px #000000);
 }
 
 @media (min-width: 400px) {
@@ -168,12 +178,6 @@ svg {
         margin: 0 1rem;
         font-size: 1.3rem;
     }
-    .img-container{
-        height: 20rem;
-        width: 27rem;
-        overflow: hidden;
-        display: flex;
-    }
 }
 
 @media (min-width: 1000px) {
@@ -199,12 +203,6 @@ svg {
     header ul li {
         margin: 0 1rem;
         font-size: 1.1rem;
-    }
-    .img-container{
-        height: 18rem;
-        width: 42rem;
-        overflow: hidden;
-        display: flex;
     }
 }
 
