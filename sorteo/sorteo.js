@@ -3,7 +3,7 @@ const spinBtn = document.getElementById("spin-btn");
 const finalValue = document.getElementById("final-value");
 let curso = "";
 
-//Object that stores values of minimum and maximum angle for a value
+//Objeto que almacena valores de ángulo mínimo y máximo para un valor
 const rotationValues = [
   { minDegree: 0, maxDegree: 30, value: "Java" },
   { minDegree: 31, maxDegree: 90, value: "Javascript" },
@@ -13,9 +13,9 @@ const rotationValues = [
   { minDegree: 271, maxDegree: 330, value: "Python" },
   { minDegree: 331, maxDegree: 360, value: "Java" },
 ];
-//Size of each piece
+//Tamaño de cada pieza
 const data = [16, 16, 16, 16, 16, 16];
-//background color for each piece
+//Color de fondo para cada pieza
 let pieColors = [
   "#FF0000",
   "#FF6A6A",
@@ -26,16 +26,16 @@ let pieColors = [
 ];
 
 
-//Create chart
+//Crear gráfico
 let myChart = new Chart(wheel, {
-  //Plugin for displaying text on pie chart
+  //Plugin para mostrar texto en gráfico circular
   plugins: [ChartDataLabels],
-  //Chart Type Pie
+  //Tipo de gráfico circular
   type: "pie",
   data: {
-    //Labels(values which are to be displayed on chart)
+    //Etiquetas (valores que se mostrarán en el gráfico)
     labels: ["Javascript", "Java", "Python", "C#", "C++", "Kotlin"],
-    //Settings for dataset/pie
+    //Configuración para dataset/pie
     datasets: [
       {
         backgroundColor: pieColors,
@@ -44,16 +44,15 @@ let myChart = new Chart(wheel, {
     ],
   },
   options: {
-    //Responsive chart
+    //Responsive
     responsive: true,
     animation: { duration: 0 },
     plugins: {
-      //hide tooltip and legend
       tooltip: false,
       legend: {
         display: false,
       },
-      //display labels inside pie chart
+      //Mostrar etiquetas dentro del gráfico circular
       datalabels: {
         color: "#ffffff",
         formatter: (_, context) => context.chart.data.labels[context.dataIndex],
@@ -62,7 +61,7 @@ let myChart = new Chart(wheel, {
     },
   },
 });
-//display value based on the randomAngle
+//valor de visualización basado en el randomAngle
 const valueGenerator = (angleValue) => {
   for (let i of rotationValues) {
     //if the angleValue is between min and max then display it
@@ -75,27 +74,27 @@ const valueGenerator = (angleValue) => {
     }
   }
 };
-//Spinner count
+//Conteo de spinner
 let count = 0;
-//100 rotations for animation and last rotation for result
+//100 rotaciones para la animación y la última rotación para el resultado
 let resultValue = 101;
-//Start spinning
+//Empieza a girar
 spinBtn.addEventListener("click", () => {
   spinBtn.disabled = true;
-  //Empty final value
+  //Valor final vacío
   finalValue.innerHTML = `<p>Buena suerte!</p>`;
-  //Generate random degrees to stop at
+  //Generar grados aleatorios para detenerse
   let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
   //Interval for rotation animation
   let rotationInterval = window.setInterval(() => {
-    //Set rotation for piechart
+    //Intervalo para animación de rotación
     /*
-    Initially to make the piechart rotate faster we set resultValue to 101 so it rotates 101 degrees at a time and this reduces by 1 with every count. Eventually on last rotation we rotate by 1 degree at a time.
+    Inicialmente, para hacer que el gráfico circular gire más rápido, establecemos resultValue en 101 para que gire 101 grados a la vez y esto se reduce en 1 con cada recuento. Finalmente, en la última rotación, giramos 1 grado a la vez.
     */
     myChart.options.rotation = myChart.options.rotation + resultValue;
-    //Update chart with new value;
+    //Actualizar gráfico con nuevo valor
     myChart.update();
-    //If rotation>360 reset it back to 0
+    //Si rotación>360 restablecerlo de nuevo a 0
     if (myChart.options.rotation >= 360) {
       count += 1;
       resultValue -= 5;
