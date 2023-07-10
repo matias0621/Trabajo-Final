@@ -28,7 +28,7 @@ header {
 header img {
     height: 2rem;
     width: 2rem;
-    margin-right: 2rem;
+    margin-right: 3rem;
 }
 
 header ul {
@@ -181,7 +181,7 @@ svg {
     header img {
         height: 3rem;
         width: 3rem;
-        margin-right: 0;
+        margin-right: 3rem;
     }
 
     header > svg {
