@@ -1,0 +1,78 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    --color-red: #FF0000;
+    --color-pink: #FF6A6A;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 1s ease;
+}
+
+header {
+  height: 10vh;
+  width: 100vw;
+  background: var(--color-red);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+header img {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 3rem;
+}
+body{
+  background-color: var(--color-pink);
+}
+
+h2{
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+label{
+  margin-left: 10%;
+  font-size: 1.5rem
+}
+.text-input{
+  width: 80%;
+  height: 3rem;
+  margin-left: 10%;
+  border-radius: .5rem;
+  border: 2px solid  var(--color-red);
+  font-size: 1.5rem;
+}
+
+.btn{
+  width: 30%;
+  height: 5rem;
+  margin-top: 3rem;
+  margin-left: 35%;
+  background: #FF0000;
+  border: none;
+  border-radius: 3rem;
+  font-size: 2rem;
+}
+
+.btn:hover{
+  transform: scale(1.1);
+}
